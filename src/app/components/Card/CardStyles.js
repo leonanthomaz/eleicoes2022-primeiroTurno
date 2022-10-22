@@ -98,10 +98,16 @@ padding: 8px;
             background: #93f893;
             border-radius: 50%;
             width: 150px;
+            height: 150px;
             margin-right: 24px;
+
+            @media(max-width: 450px){
+                background: none;
+            }
 
             img{
                 width: 100%;
+                border-radius: 50%;
             }
 
             @media(max-width: 760px) or (max-height: 500px){
@@ -166,7 +172,7 @@ padding: 8px;
         }
 
         @media(max-width: 450px){
-            font-size: 12px;
+            font-size: 10px;
         }
     }
     .candidato-qtd-votos{
