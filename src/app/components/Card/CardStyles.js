@@ -38,7 +38,9 @@ align-items: center;
     margin: 10px;
     padding: 7px;
     color: white;
-    border-radius: 10px;
+    border-radius: 10px;  
+    text-decoration: none;
+    cursor: pointer;
 }
 
 `;
@@ -77,7 +79,7 @@ grid-template-columns: auto auto;
 justify-content: center;
 align-items: center;
 gap: 10px;
-padding-top: 50px;
+padding-top: 10px;
 
 `;
 
@@ -103,7 +105,7 @@ padding: 8px;
 }
 
 @media(max-width: 450px){
-    width: 170px;
+    width: 180px;
 }
 
 .candidato-header{
@@ -121,7 +123,9 @@ padding: 8px;
         justify-content: center;
 
         .candidato-img{
-            background: #93f893;
+            /* background: #93f893; */
+            background: ${({eleito}) => (eleito ? '#93f893' : '#f89393')};
+
             border-radius: 50%;
             width: 150px;
             height: 150px;
@@ -131,7 +135,7 @@ padding: 8px;
                 background: none;
 
                 img{
-                    border: 2px solid #93f893;
+                    border: ${({eleito}) => (eleito ? '2px solid #93f893' : '2px solid #f89393')};
                 }
             }
 
@@ -174,7 +178,11 @@ padding: 8px;
                 font-weight: 900;
 
                 @media(max-width: 760px){
-                    font-size: 16px;
+                    font-size: 22px;
+                }
+
+                @media(max-width: 450px){
+                    font-size: 20px;
                 }
             }
 
@@ -196,6 +204,8 @@ padding: 8px;
 
     .candidato-nome{
         /* line-height: 5px; */
+        text-align: center;
+
         h2{
             font-size: 30px;
             font-weight: 900;
@@ -215,7 +225,7 @@ padding: 8px;
 
         @media(max-width: 450px){
             h2{
-                font-size: 15px;
+                font-size: 18px;
             }
             h5{
                 font-size: 12px;
@@ -242,8 +252,9 @@ export const EleitoInfo = styled.div`
 display: flex;
 text-align: center;
 align-items: center;
+justify-content: center;
 height: 12px;
-padding: 3px;
+padding: 10px;
 border-radius: 8px;
 
 border: ${({eleito}) => (eleito ? '2px solid green' : '2px solid red')};
