@@ -29,85 +29,66 @@ export const GeraisModal = ({infoGerais, handleCloseGerais, showGerais }) => {
       </Modal.Header>
 
       <Modal.Body style={{background: '#ecececce', padding: '20px'}}>
-
-        <M.Teste>
-          <div className='container'>
-            <div className='a'>
-
-                <h3>{Number(infoGerais.totais).toLocaleString('pt-BR')} - {infoGerais.pcomparecimento}%</h3>
-                <span>Total Comparecimento</span>
-
-                <h3>{Number(infoGerais.abstencoes).toLocaleString('pt-BR')} - {infoGerais.pabstencoes}%</h3>
-                <span>Abstenções</span>
-
-            </div>
-            <div className='b'>
-
-              <div className='right-header'>
-                  <h3>{Number(infoGerais.totais).toLocaleString('pt-BR')}</h3>
-                  <span>Total de votos</span>
-                  <br/>
-                  <h3>Total de seções (s) - {Number(infoGerais.secoes).toLocaleString('pt-BR')}</h3>
-                  <br/>
-                  <h3>Seções totalizadas (t) - {Number(infoGerais.tsecoes).toLocaleString('pt-BR')}</h3>
-                  <br/>
-                  <h3>porcentagem totalizadas (ps) - {infoGerais.psecoes}</h3>
-                  <span>secoes </span>
-              </div>
-                  
-              <div className='right-footer'>
-
-                  <h3>Votos Válidos: {Number(infoGerais.validos).toLocaleString('pt-BR')}</h3>
-                  <br/>
-                  <h3>Branco - {Number(infoGerais.branco).toLocaleString('pt-BR')} - {infoGerais.pbranco}%</h3>
-                  <br/>
-                  <h3>Nulos - {Number(infoGerais.nulos).toLocaleString('pt-BR')} - {infoGerais.pnulo}%</h3>
-
-                  {/* <h3>{Number(infoGerais.validos).toLocaleString('pt-BR')}</h3> */}
-              </div>
-            </div>
-          </div>
-        </M.Teste>
       
-      <M.Container>
-        <div className='right'>
-          <M.Box1>
-            <M.Circulo1>
-                <div className='aaa'>
-                  <h3>{Number(infoGerais.totais).toLocaleString('pt-BR')}</h3>
-                  <span>Totais</span>
-                </div>
-                numero abstencoes{infoGerais.abstencoes}
-                % de abst{infoGerais.pabstencoes}
-                %de comparecimento {infoGerais.pcomparecimento}
-            </M.Circulo1>
-          </M.Box1>
-        </div>
-        <div className='right'>
-          <M.Box2>
-            <M.Circulo2>
-                <div className='bbb'>
-                  <h3>{Number(infoGerais.validos).toLocaleString('pt-BR')}</h3>
-                  <p>{infoGerais.pbranco}%</p>
-                  <span>Válidos</span>
-                </div>
-            </M.Circulo2>
-            <M.Circulo2>
-                <div className='bbb'>
-                  <h3>{Number(infoGerais.branco).toLocaleString('pt-BR')}</h3>
-                  <span>Brancos</span>
-                </div>
-            </M.Circulo2>
-            <M.Circulo2>
-                <div className='bbb'>
-                  <h3>{Number(infoGerais.nulos).toLocaleString('pt-BR')}</h3>
-                  <p>{infoGerais.pnulo}%</p>
-                  <span>Nulos</span>
-                </div>
-            </M.Circulo2>
-          </M.Box2>
-        </div>
-      </M.Container>
+      <M.ContainerPrimario>
+        <M.Left>
+          <M.CirculoPrincipal>
+              <div className='circulo-principal-container'>
+                <span>Total Comparecimento</span>
+                <h3>{Number(infoGerais.totais).toLocaleString('pt-BR')}</h3>
+                <h2>{infoGerais.pcomparecimento}%</h2>
+              </div>
+          </M.CirculoPrincipal>
+        </M.Left>
+
+        <M.Right>
+          <M.CirculoSecundario>
+              <div className='circulo-secundario-container'>
+                <span>Abstenções</span>
+                <h3>{Number(infoGerais.abstencoes).toLocaleString('pt-BR')}</h3>
+                <h5>{infoGerais.pabstencoes}%</h5>
+              </div>
+          </M.CirculoSecundario>
+          <M.CirculoSecundario>
+              <div className='circulo-secundario-container'>
+                <span>Brancos</span>
+                <h3>{Number(infoGerais.branco).toLocaleString('pt-BR')}</h3>
+                <h5>{infoGerais.pbranco}%</h5>
+              </div>
+          </M.CirculoSecundario>
+          <M.CirculoSecundario>
+              <div className='circulo-secundario-container'>
+                <span>Nulos</span>
+                <h3>{Number(infoGerais.nulos).toLocaleString('pt-BR')}</h3>
+                <h5>{infoGerais.pnulo}%</h5>
+              </div>
+          </M.CirculoSecundario>
+        </M.Right>
+      </M.ContainerPrimario>
+
+      <M.ContainerSecundario>
+          <M.CirculoTerciario>
+            <div className='bbb'>
+              <h3>{Number(infoGerais.totais).toLocaleString('pt-BR')}</h3>
+              <span>Total de Sessões</span>
+            </div>
+          </M.CirculoTerciario>
+
+          <M.CirculoTerciario>
+            <div className='bbb'>
+              <h3>{Number(infoGerais.secoes).toLocaleString('pt-BR')}</h3>
+              <p>{infoGerais.psecoes}%</p>
+              <span>Sessões Totalizadas</span>
+            </div>
+          </M.CirculoTerciario>
+
+          <M.CirculoTerciario>
+            <div className='bbb'>
+              <h3>{Number(infoGerais.tsecoes).toLocaleString('pt-BR')}</h3>
+              <span>Total de votos</span>
+            </div>
+          </M.CirculoTerciario>
+      </M.ContainerSecundario>
       <br/>
       </Modal.Body>
 
