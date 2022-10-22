@@ -81,6 +81,11 @@ align-items: center;
 gap: 10px;
 padding-top: 10px;
 
+@media(max-width: 375px){
+    gap: 5px;
+    padding-top: 5px;
+}
+
 `;
 
 export const Candidato = styled.div`
@@ -92,7 +97,7 @@ align-items: center;
 
 background: #eeeeee;
 border-radius: 10px;
-
+cursor: pointer;
 
 box-shadow: ${({eleito}) => (eleito ? 'rgba(30, 179, 16) 0px 5px 15px' : 'rgba(0, 0, 0, 0.35) 0px 5px 15px')};
 
@@ -229,7 +234,7 @@ padding: 8px;
 
         @media(max-width: 450px){
             h2{
-                font-size: 20px;
+                font-size: 18px;
             }
             h5{
                 font-size: 12px;
@@ -238,7 +243,7 @@ padding: 8px;
 
         @media(max-width: 370px){
             h2{
-                font-size: 18px;
+                font-size: 16px;
             }
             h5{
                 font-size: 11px;

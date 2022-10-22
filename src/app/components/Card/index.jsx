@@ -18,15 +18,18 @@ import { CandidatoModal } from '../CandidatoModal'
 export const Card = ({ data }) => {
 
     const [ candidato, setCandidato ] = useState([])
-
+    const [ infoGerais, setInfoGerais ] = useState([])
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
-    const handleFind = (id, nome, partido, numero, situacao) => {
-        console.log(id)
-        // const item = data.filter(e => e.map(i => i.seq === id))
+    const handleInfoGerais = (validos) => {
+        setInfoGerais({validos})
+        handleShow()
+    }
+
+    const handleInfoCandidato = (id, nome, partido, numero, situacao) => {
         setCandidato({ id, nome, partido, numero, situacao })
         handleShow()
     }
@@ -49,8 +52,10 @@ export const Card = ({ data }) => {
                         <span>Última atualização: {st.dt} - {st.ht} (Horário local) - Fonte: TSE</span>
                     </div>
                 </C.Titulo>
+
                 <C.TopBar>
                    <span><a onClick={()=>{window.location.reload()}} className='atualizar'><BiRefresh/> Atualizar</a></span>
+                   <span><a onClick={()=>{handleInfoGerais(st.vnom)}} className='gerais'><BiRefresh/> Informações Gerais</a></span>
                 </C.TopBar>
 
                 <CandidatoModal 
@@ -63,7 +68,7 @@ export const Card = ({ data }) => {
                 <C.Container>
                     {st.cand.map((c, i)=>{
                         return(
-                        <C.Candidato key={i} eleito={c.e === 's'} onClick={()=>handleFind(
+                        <C.Candidato key={i} eleito={c.e === 's'} onClick={()=>handleInfoCandidato(
                             c.seq, c.nm, c.cc, c.n, c.st)}>
                             <div className='candidato-header'>
                                 <div className='candidato-left'>
@@ -98,8 +103,6 @@ export const Card = ({ data }) => {
     
                             <div className='candidato-footer'>
                                 <div className='candidato-nome'>
-                                    {/* <h2>{c.nm.split(' ').slice(0, 1).join(' ') === 'JAIR' ? 'BOLSONARO' : c.nm.split(' ').slice(0, 1).join(' ')}</h2> */}
-                                    {/* <h2>{c.nm.split(' ').slice(0, 1).join(' ')}</h2> */}
                                     <h2>
                                         {
                                             c.nm === "LULA" ? 'LULA' 
