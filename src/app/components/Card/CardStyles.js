@@ -23,6 +23,26 @@ padding-top: 20px;
 }
 `;
 
+
+export const TopBar = styled.div`
+/* border: 2px solid red; */
+display: flex;
+justify-content: center;
+align-items: center;
+
+
+.atualizar{
+    background: #434392ee;
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    padding: 7px;
+    color: white;
+    border-radius: 10px;
+}
+
+`;
+
 export const TituloUrnasApuradasContainer = styled.div`
 display: grid;
 grid-template-columns: 30px auto 30px;
@@ -71,9 +91,10 @@ align-items: center;
 background: #eeeeee;
 border-radius: 10px;
 
+
 box-shadow: ${({eleito}) => (eleito ? 'rgba(30, 179, 16) 0px 5px 15px' : 'rgba(0, 0, 0, 0.35) 0px 5px 15px')};
 
-width: 300px;
+width: 320px;
 padding: 8px;
 
 
@@ -82,12 +103,17 @@ padding: 8px;
 }
 
 @media(max-width: 450px){
-    width: 150px;
+    width: 170px;
 }
 
 .candidato-header{
+    padding: 10px;
     display: grid;
     grid-template-columns: auto auto;
+
+    @media(max-width: 760px){
+        max-height: 120px;
+    }
 
     .candidato-left{
         display: flex;
@@ -101,8 +127,12 @@ padding: 8px;
             height: 150px;
             margin-right: 24px;
 
-            @media(max-width: 450px){
+            @media(max-width: 760px){
                 background: none;
+
+                img{
+                    border: 2px solid #93f893;
+                }
             }
 
             img{
@@ -166,13 +196,30 @@ padding: 8px;
 
     .candidato-nome{
         /* line-height: 5px; */
-
+        h2{
+            font-size: 30px;
+            font-weight: 900;
+        }
+        h5{
+            font-size: 18px;
+        }
+       
         @media(max-width: 760px){
-            font-size: 15px;
+            h2{
+                font-size: 20px;
+            }
+            h5{
+                font-size: 14px;
+            }
         }
 
         @media(max-width: 450px){
-            font-size: 10px;
+            h2{
+                font-size: 15px;
+            }
+            h5{
+                font-size: 12px;
+            }
         }
     }
     .candidato-qtd-votos{

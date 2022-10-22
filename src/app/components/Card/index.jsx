@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, useState } from 'react'
 import * as C from './CardStyles'
 import imgLula from '../../assets/img/lula.png'
 import imgBolsonaro from '../../assets/img/bolsonaro.png'
@@ -11,8 +11,26 @@ import imgSofia from '../../assets/img/sofia.png'
 import imgVera from '../../assets/img/vera.png'
 import imgFelipe from '../../assets/img/felipe.png'
 import imgEymael from '../../assets/img/eymael.png'
+import { BiRefresh } from "react-icons/bi";
+
+import { CandidatoModal } from '../CandidatoModal'
 
 export const Card = ({ data }) => {
+
+    const [ list, setList ] = useState([])
+    console.log('listagem:',list)
+
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
+    const handleFind = (id, nome, partido, numero) => {
+        console.log(id)
+        // const item = data.filter(e => e.map(i => i.seq === id))
+        setList({ id, nome, partido, numero })
+        handleShow()
+    }
 
     return (
     <C.Principal >
@@ -32,10 +50,22 @@ export const Card = ({ data }) => {
                         <span>Última atualização: {st.dt} - {st.ht} (Horário local) - Fonte: TSE</span>
                     </div>
                 </C.Titulo>
+                <C.TopBar>
+                   <span><a onClick={()=>{window.location.reload()}} className='atualizar'><BiRefresh/> Atualizar</a></span>
+                </C.TopBar>
+
+                <CandidatoModal 
+                list={list} 
+                handleClose={handleClose}
+                show={show}
+                setShow={setShow}
+                />
+                
                 <C.Container>
                     {st.cand.map((c, i)=>{
                         return(
-                        <C.Candidato key={i} eleito={c.e === 's'}>
+                        <C.Candidato key={i} eleito={c.e === 's'} onClick={()=>handleFind(
+                            c.seq, c.nm, c.cc, c.n)}>
                             <div className='candidato-header'>
                                 <div className='candidato-left'>
                                     <div className='candidato-img'>
@@ -71,7 +101,22 @@ export const Card = ({ data }) => {
                                 <div className='candidato-nome'>
                                     {/* <h2>{c.nm.split(' ').slice(0, 1).join(' ') === 'JAIR' ? 'BOLSONARO' : c.nm.split(' ').slice(0, 1).join(' ')}</h2> */}
                                     {/* <h2>{c.nm.split(' ').slice(0, 1).join(' ')}</h2> */}
-                                    <h2>{c.nm}</h2>
+                                    <h2>
+                                        {
+                                            c.nm === "LULA" ? 'LULA' 
+                                            : c.nm === "JAIR BOLSONARO" ? 'BOLSONARO' 
+                                            : c.nm === "CIRO GOMES" ? 'CIRO GOMES' 
+                                            : c.nm === "SIMONE TEBET" ? 'SIMONE TEBET' 
+                                            : c.nm === "SORAYA THRONICKE" ? 'SORAYA' 
+                                            : c.nm === "FELIPE D&apos;AVILA" ? "FELIPE D'ÁVILA" 
+                                            : c.nm === "PADRE KELMON" ? 'PADRE KELMON' 
+                                            : c.nm === "LÉO PÉRICLES" ? 'LÉO PÉRICLES' 
+                                            : c.nm === "SOFIA MANZANO" ? 'SOFIA MANZANO' 
+                                            : c.nm === "VERA" ? 'VERA LÚCIA' 
+                                            : c.nm === "CONSTITUINTE EYMAEL" ? 'EYMAEL' 
+                                            : ''
+                                        }
+                                    </h2>
                                     <h5>Vice: {c.nv}</h5>
                                     {c.e === 's' ? 
                                         <C.EleitoInfo eleito={c.e === 's'}>

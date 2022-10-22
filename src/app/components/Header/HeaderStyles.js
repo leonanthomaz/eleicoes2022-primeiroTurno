@@ -13,6 +13,7 @@ background: #eeeeee;
 export const Titulo = styled.h1`
     margin-left: 30px;
     color: #040461;
+    font-weight: 700;
 
     @media(max-width: 500px){
         font-size: 24px;
