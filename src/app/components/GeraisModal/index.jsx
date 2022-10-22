@@ -24,16 +24,19 @@ export const GeraisModal = ({infoGerais, handleCloseGerais, showGerais }) => {
           // borderBottom: '2px solid',
           lineHeight: '5rem',
           fontWeight: 900
-          }}>Gerais</h2>
+          }}>Estatísticas Gerais</h2>
           </Modal.Title>
       </Modal.Header>
 
       <Modal.Body style={{background: '#ecececce', padding: '20px'}}>
+
+
       
       <M.ContainerPrimario>
         <M.Left>
           <M.CirculoPrincipal>
               <div className='circulo-principal-container'>
+                
                 <span>Total Comparecimento</span>
                 <h3>{Number(infoGerais.totais).toLocaleString('pt-BR')}</h3>
                 <h2>{infoGerais.pcomparecimento}%</h2>
@@ -67,27 +70,29 @@ export const GeraisModal = ({infoGerais, handleCloseGerais, showGerais }) => {
       </M.ContainerPrimario>
 
       <M.ContainerSecundario>
-          <M.CirculoTerciario>
-            <div className='bbb'>
-              <h3>{Number(infoGerais.totais).toLocaleString('pt-BR')}</h3>
-              <span>Total de Sessões</span>
-            </div>
-          </M.CirculoTerciario>
+        <M.CirculoTerciario>
+          <div className='circulo-terciario-container'>
+            <FaVoteYea/>
+            <h3>{Number(infoGerais.secoes).toLocaleString('pt-BR')}</h3>
+            <span>seções no total</span>
+          </div>
+        </M.CirculoTerciario>
 
-          <M.CirculoTerciario>
-            <div className='bbb'>
-              <h3>{Number(infoGerais.secoes).toLocaleString('pt-BR')}</h3>
-              <p>{infoGerais.psecoes}%</p>
-              <span>Sessões Totalizadas</span>
-            </div>
-          </M.CirculoTerciario>
+        <M.CirculoTerciario>
+          <div className='circulo-terciario-container'>
+            <FaVoteYea/>
+            <h3>{Number(infoGerais.tsecoes).toLocaleString('pt-BR')}</h3>
+            <span>seções apuradas</span>
+          </div>
+        </M.CirculoTerciario>
 
-          <M.CirculoTerciario>
-            <div className='bbb'>
-              <h3>{Number(infoGerais.tsecoes).toLocaleString('pt-BR')}</h3>
-              <span>Total de votos</span>
-            </div>
-          </M.CirculoTerciario>
+        <M.CirculoTerciario>
+          <div className='circulo-terciario-container'>
+            <FaVoteYea/>
+            <h3>{infoGerais.psecoes}%</h3>
+            <span>das unas apuradas</span>
+          </div>
+        </M.CirculoTerciario>
       </M.ContainerSecundario>
       <br/>
       </Modal.Body>

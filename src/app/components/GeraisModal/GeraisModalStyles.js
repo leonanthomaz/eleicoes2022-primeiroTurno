@@ -52,6 +52,11 @@ display: flex;
 justify-content: center;
 padding: 10px;
 
+@media(max-width: 450px){
+   display: grid;
+   grid-template-columns: auto auto;
+}
+
 `;
 
 export const Left = styled.div`
@@ -130,7 +135,7 @@ text-align: center;
 `;
 
 export const CirculoSecundario = styled.div`
-border: 5px solid #303030;
+border: 5px solid #3daa27;
 border-radius: 50%;
 width: 150px;
 height: 150px;
@@ -156,6 +161,7 @@ text-align: center;
     h3{
         font-size: 18px;
         font-weight: 700;
+        color: #090983;
 
         @media(max-width: 760px){
             font-size: 16px;
@@ -182,23 +188,24 @@ text-align: center;
 `;
 
 export const CirculoTerciario = styled.div`
+box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 border-radius: 20px;
-border-radius: 50%;
-width: 120px;
-height: 120px;
+/* border-radius: 50%; */
+width: 170px;
+height: 170px;
 position: relative;
 text-align: center;
 margin: 10px;
 
 @media(max-width: 760px){
-    width: 100px;
-    height: 100px;
+    width: 140px;
+    height: 140px;
+    /* box-shadow: none; */
 }
 
-.bbb{
+.circulo-terciario-container{
     margin-top: 34px;
     margin-left: 10px;
-    position: absolute;
 
     @media(max-width: 760px){
         margin-top: 27px;
@@ -208,6 +215,7 @@ margin: 10px;
     h3{
     font-size: 18px;
     font-weight: 700;
+    color: #090983;
 
     @media(max-width: 760px){
         font-size: 16px;
