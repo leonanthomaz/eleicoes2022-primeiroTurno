@@ -108,6 +108,10 @@ padding: 8px;
     width: 180px;
 }
 
+@media(max-width: 375px){
+    width: 170px;
+}
+
 .candidato-header{
     padding: 10px;
     display: grid;
@@ -225,10 +229,19 @@ padding: 8px;
 
         @media(max-width: 450px){
             h2{
-                font-size: 18px;
+                font-size: 20px;
             }
             h5{
                 font-size: 12px;
+            }
+        }
+
+        @media(max-width: 370px){
+            h2{
+                font-size: 18px;
+            }
+            h5{
+                font-size: 11px;
             }
         }
     }

@@ -13,29 +13,55 @@ import imgVera from '../../assets/img/vera.png'
 import imgFelipe from '../../assets/img/felipe.png'
 import imgEymael from '../../assets/img/eymael.png'
 
-export const CandidatoModal = ({ list, handleClose, show }) => {
+import { AiOutlineClose } from "react-icons/ai";
+
+export const CandidatoModal = ({ candidato, handleClose, show }) => {
     
   return (
-    <Modal show={show} onHide={handleClose}>
+    <Modal
+      size="md"
+      aria-labelledby={`Janela com informações do candidato ${candidato.nome}`}
+      centered
+      show={show} 
+      onHide={handleClose}
+      style={{background: '#14141498'}}
+     >
       <Modal.Header closeButton>
-          <Modal.Title>{list.nome}</Modal.Title>
+          <Modal.Title>
+          <h1 style={{
+          color: '#14141498', 
+          textAlign: 'center', 
+          marginTop: '20px',
+          // borderBottom: '2px solid',
+          lineHeight: '5rem',
+          fontWeight: 900
+          }}>{candidato.nome}</h1>
+          </Modal.Title>
       </Modal.Header>
-      <Modal.Body style={{ margin: 'auto'}}>
-        <img src={
-          list.nome === "LULA" ? imgLula 
-          : list.nome === "JAIR BOLSONARO" ? imgBolsonaro 
-          : list.nome === "CIRO GOMES" ? imgCiro 
-          : list.nome === "SIMONE TEBET" ? imgSimone 
-          : list.nome === "SORAYA THRONICKE" ? imgSoraya 
-          : list.nome === "FELIPE D&apos;AVILA" ? imgFelipe 
-          : list.nome === "PADRE KELMON" ? imgPadre 
-          : list.nome === "LÉO PÉRICLES" ? imgLeo 
-          : list.nome === "SOFIA MANZANO" ? imgSofia 
-          : list.nome === "VERA" ? imgVera 
-          : list.nome === "CONSTITUINTE EYMAEL" ? imgEymael 
-          : ''} alt={list.nome} width={150} />
-          <h4>{list.partido}</h4>
-          <p>{list.numero}</p>
+      <Modal.Body style={{background: '#ecececce', padding: '20px'}}>
+      <div className="" style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+          <img 
+          src={
+            candidato.nome === "LULA" ? imgLula 
+            : candidato.nome === "JAIR BOLSONARO" ? imgBolsonaro 
+            : candidato.nome === "CIRO GOMES" ? imgCiro 
+            : candidato.nome === "SIMONE TEBET" ? imgSimone 
+            : candidato.nome === "SORAYA THRONICKE" ? imgSoraya 
+            : candidato.nome === "FELIPE D&apos;AVILA" ? imgFelipe 
+            : candidato.nome === "PADRE KELMON" ? imgPadre 
+            : candidato.nome === "LÉO PÉRICLES" ? imgLeo 
+            : candidato.nome === "SOFIA MANZANO" ? imgSofia 
+            : candidato.nome === "VERA" ? imgVera 
+            : candidato.nome === "CONSTITUINTE EYMAEL" ? imgEymael 
+            : ''} alt={candidato.nome} width={150} />
+            
+      </div><br/>
+      <div style={{textAlign: 'center', fontSize: '32px', fontWeight: 'bold'}}>
+          <p>{candidato.numero}</p>
+      </div><br/>
+      <h4 style={{textAlign: 'center', fontSize: '16px'}}>{candidato.partido}</h4><br/>
+      <br/>
+      situação: {candidato.situacao}
       </Modal.Body>
 
       <Modal.Footer>

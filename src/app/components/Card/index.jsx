@@ -17,18 +17,17 @@ import { CandidatoModal } from '../CandidatoModal'
 
 export const Card = ({ data }) => {
 
-    const [ list, setList ] = useState([])
-    console.log('listagem:',list)
+    const [ candidato, setCandidato ] = useState([])
 
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
-    const handleFind = (id, nome, partido, numero) => {
+    const handleFind = (id, nome, partido, numero, situacao) => {
         console.log(id)
         // const item = data.filter(e => e.map(i => i.seq === id))
-        setList({ id, nome, partido, numero })
+        setCandidato({ id, nome, partido, numero, situacao })
         handleShow()
     }
 
@@ -55,7 +54,7 @@ export const Card = ({ data }) => {
                 </C.TopBar>
 
                 <CandidatoModal 
-                list={list} 
+                candidato={candidato} 
                 handleClose={handleClose}
                 show={show}
                 setShow={setShow}
@@ -65,7 +64,7 @@ export const Card = ({ data }) => {
                     {st.cand.map((c, i)=>{
                         return(
                         <C.Candidato key={i} eleito={c.e === 's'} onClick={()=>handleFind(
-                            c.seq, c.nm, c.cc, c.n)}>
+                            c.seq, c.nm, c.cc, c.n, c.st)}>
                             <div className='candidato-header'>
                                 <div className='candidato-left'>
                                     <div className='candidato-img'>
@@ -111,7 +110,7 @@ export const Card = ({ data }) => {
                                             : c.nm === "FELIPE D&apos;AVILA" ? "FELIPE D'ÁVILA" 
                                             : c.nm === "PADRE KELMON" ? 'PADRE KELMON' 
                                             : c.nm === "LÉO PÉRICLES" ? 'LÉO PÉRICLES' 
-                                            : c.nm === "SOFIA MANZANO" ? 'SOFIA MANZANO' 
+                                            : c.nm === "SOFIA MANZANO" ? 'SOFIA MANZ' 
                                             : c.nm === "VERA" ? 'VERA LÚCIA' 
                                             : c.nm === "CONSTITUINTE EYMAEL" ? 'EYMAEL' 
                                             : ''
