@@ -15,15 +15,15 @@ import imgEymael from '../../assets/img/eymael.png'
 
 import { AiOutlineClose } from "react-icons/ai";
 
-export const CandidatoModal = ({ candidato, handleClose, show }) => {
+export const CandidatoModal = ({ candidato, handleCloseCandidato, showCandidato }) => {
     
   return (
     <Modal
       size="md"
       aria-labelledby={`Janela com informações do candidato ${candidato.nome}`}
       centered
-      show={show} 
-      onHide={handleClose}
+      show={showCandidato} 
+      onHide={handleCloseCandidato}
       style={{background: '#14141498'}}
      >
       <Modal.Header closeButton>
