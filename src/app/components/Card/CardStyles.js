@@ -43,6 +43,18 @@ align-items: center;
     cursor: pointer;
 }
 
+.gerais{
+    background: #434392ee;
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    padding: 7px;
+    color: white;
+    border-radius: 10px;  
+    text-decoration: none;
+    cursor: pointer;
+}
+
 `;
 
 export const TituloUrnasApuradasContainer = styled.div`

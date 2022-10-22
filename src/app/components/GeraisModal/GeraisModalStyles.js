@@ -1,5 +1,35 @@
 import styled from "styled-components";
 
+export const Teste = styled.div`
+
+border: 2px solid red;
+
+.container{
+    display: grid;
+    grid-template-columns: auto auto;
+    border: 2px solid green;
+
+    @media(max-width: 1000px){
+        display: flex;
+        flex-direction: column;
+    }
+
+    .a{
+        background: green;
+        width: 300px;
+        height: auto;
+    }
+
+    .b{
+        background: blue;
+        width: 300px;
+        height: auto;
+    }
+
+}
+
+`;
+
 export const Container = styled.div`
 display: grid;
 grid-template-columns: auto auto;

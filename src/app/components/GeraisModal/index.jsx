@@ -17,18 +17,57 @@ export const GeraisModal = ({infoGerais, handleCloseGerais, showGerais }) => {
      >
       <Modal.Header closeButton>
           <Modal.Title>
-          <h1 style={{
+          <h2 style={{
           color: '#14141498', 
           textAlign: 'center', 
           marginTop: '20px',
           // borderBottom: '2px solid',
           lineHeight: '5rem',
           fontWeight: 900
-          }}>Gerais</h1>
+          }}>Gerais</h2>
           </Modal.Title>
       </Modal.Header>
 
       <Modal.Body style={{background: '#ecececce', padding: '20px'}}>
+
+        <M.Teste>
+          <div className='container'>
+            <div className='a'>
+
+                <h3>{Number(infoGerais.totais).toLocaleString('pt-BR')} - {infoGerais.pcomparecimento}%</h3>
+                <span>Total Comparecimento</span>
+
+                <h3>{Number(infoGerais.abstencoes).toLocaleString('pt-BR')} - {infoGerais.pabstencoes}%</h3>
+                <span>Abstenções</span>
+
+            </div>
+            <div className='b'>
+
+              <div className='right-header'>
+                  <h3>{Number(infoGerais.totais).toLocaleString('pt-BR')}</h3>
+                  <span>Total de votos</span>
+                  <br/>
+                  <h3>Total de seções (s) - {Number(infoGerais.secoes).toLocaleString('pt-BR')}</h3>
+                  <br/>
+                  <h3>Seções totalizadas (t) - {Number(infoGerais.tsecoes).toLocaleString('pt-BR')}</h3>
+                  <br/>
+                  <h3>porcentagem totalizadas (ps) - {infoGerais.psecoes}</h3>
+                  <span>secoes </span>
+              </div>
+                  
+              <div className='right-footer'>
+
+                  <h3>Votos Válidos: {Number(infoGerais.validos).toLocaleString('pt-BR')}</h3>
+                  <br/>
+                  <h3>Branco - {Number(infoGerais.branco).toLocaleString('pt-BR')} - {infoGerais.pbranco}%</h3>
+                  <br/>
+                  <h3>Nulos - {Number(infoGerais.nulos).toLocaleString('pt-BR')} - {infoGerais.pnulo}%</h3>
+
+                  {/* <h3>{Number(infoGerais.validos).toLocaleString('pt-BR')}</h3> */}
+              </div>
+            </div>
+          </div>
+        </M.Teste>
       
       <M.Container>
         <div className='right'>
@@ -67,29 +106,13 @@ export const GeraisModal = ({infoGerais, handleCloseGerais, showGerais }) => {
                 </div>
             </M.Circulo2>
           </M.Box2>
-
-          <M.Box3>
-          
-          <M.Circulo3>
-              <div className='ccc'>
-                <h3>{Number(infoGerais.anulados).toLocaleString('pt-BR')}</h3>
-                <span>Anulados</span>
-              </div>
-          </M.Circulo3>
-          <M.Circulo3>
-              <div className='ccc'>
-                <h3>{Number(infoGerais.anulados).toLocaleString('pt-BR')}</h3>
-                <span>Anulados</span>
-              </div>
-          </M.Circulo3>
-          </M.Box3>
         </div>
       </M.Container>
       <br/>
       </Modal.Body>
 
       <Modal.Footer>
-
+          Fonte: TSE
       </Modal.Footer>
     </Modal>
   )
