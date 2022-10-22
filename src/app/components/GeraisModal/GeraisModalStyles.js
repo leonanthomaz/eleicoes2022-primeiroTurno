@@ -1,33 +1,53 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+display: grid;
+grid-template-columns: auto auto;
 
+
+@media(max-width: 1000px){
+    display: flex;
+    flex-direction: column;
+}
+
+
+.left{
+    flex: 1;
+}
+
+.right{
+    flex: 2.5;
+}
 `;
 
 export const Box1 = styled.div`
 display: grid;
 grid-template-columns: auto;
-align-items: center;
-justify-content: center;
+
+@media(max-width: 1000px){
+    align-items: center;
+    justify-content: center;
+}
 `;
 
 export const Box2 = styled.div`
-border: 2px solid red;
 display: grid;
 grid-template-columns: auto auto auto;
+align-items: center;
+justify-content: center;
+gap: 10px;
 `;
 
 export const Box3 = styled.div`
-border: 2px solid red;
 display: grid;
 grid-template-columns: auto auto;
 align-items: center;
 justify-content: center;
-gap: 20px;
+gap: 10px;
 `;
 
 export const Circulo1 = styled.div`
-border: 2px solid red;
+border: 5px solid #303030;
 
 border-radius: 50%;
 width: 220px;
@@ -41,8 +61,8 @@ text-align: center;
 }
 
 .aaa{
-    margin-top: 70px;
-    margin-left: 13px;
+    margin-top: 80px;
+    margin-left: 10px;
     position: absolute;
 
     @media(max-width: 760px){
@@ -70,7 +90,7 @@ text-align: center;
 `;
 
 export const Circulo2 = styled.div`
-border: 2px solid red;
+border: 5px solid #303030;
 border-radius: 50%;
 width: 120px;
 height: 120px;
@@ -83,7 +103,7 @@ text-align: center;
 }
 
 .bbb{
-    margin-top: 25px;
+    margin-top: 34px;
     margin-left: 10px;
     position: absolute;
 
@@ -113,7 +133,7 @@ text-align: center;
 `;
 
 export const Circulo3 = styled.div`
-border: 2px solid red;
+border: 5px solid #303030;
 border-radius: 50%;
 width: 120px;
 height: 120px;
@@ -135,8 +155,8 @@ text-align: center;
         margin-left: 12px;
     }
 
-    h5{
-    font-size: 20px;
+    h3{
+    font-size: 17px;
 
     @media(max-width: 760px){
         font-size: 12px;

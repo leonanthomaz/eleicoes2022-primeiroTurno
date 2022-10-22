@@ -33,17 +33,27 @@ export const Card = ({ data }) => {
 
     const handleInfoGerais = (
         validos,
+        pcomparecimento,
+        abstencoes,
+        pabstencoes,
         anulados,
         anuladosSJ,
         nulos,
+        pnulo,
         branco,
+        pbranco,
         totais) => {
         setInfoGerais({
             validos,
+            pcomparecimento,
+            abstencoes,
+            pabstencoes,
             anulados,
             anuladosSJ,
             nulos,
+            pnulo,
             branco,
+            pbranco,
             totais})
         handleShowGerais()
     }
@@ -76,10 +86,15 @@ export const Card = ({ data }) => {
                    <span><a onClick={()=>{window.location.reload()}} className='atualizar'><BiRefresh/> Atualizar</a></span>
                    <span><a onClick={()=>{handleInfoGerais(
                     st.vnom,
+                    st.pc,
+                    st.a,
+                    st.pa,
                     st.van,
                     st.vansj,
                     st.tvn,
+                    st.ptvn,
                     st.vb,
+                    st.pvb,
                     st.tv)}} className='gerais'><FaVoteYea/> Informações Gerais</a></span>
                 </C.TopBar>
 

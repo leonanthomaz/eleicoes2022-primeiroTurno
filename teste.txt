@@ -5,4 +5,11 @@ Nulos  = tvn
 Em Branco = vb
 Anulados e apurados em separado = 
 
+
 votos = tv
+
+sessoes = t
+
+sessoes totalizadas = st
+
+porcentagem sessoes totalizadas = pst
