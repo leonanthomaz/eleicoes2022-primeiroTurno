@@ -1,6 +1,6 @@
 import React from 'react';
 import Modal from 'react-bootstrap/Modal';
-
+import * as VT from './GeraisModalStyles'
 import { AiOutlineClose } from "react-icons/ai";
 
 export const GeraisModal = ({infoGerais, handleCloseGerais, showGerais }) => {
@@ -28,8 +28,21 @@ export const GeraisModal = ({infoGerais, handleCloseGerais, showGerais }) => {
       </Modal.Header>
       <Modal.Body style={{background: '#ecececce', padding: '20px'}}>
       <div className="" style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-            <h1>{infoGerais.branco}</h1>
+           
       </div><br/>
+
+      <div className='geral'>
+
+      <VT.VT validos={infoGerais.validos} brancos={infoGerais.branco}/>
+
+      <h1>Validos: {infoGerais.validos}</h1><br/>
+      <h1>Brancos: {infoGerais.branco}</h1><br/>
+      <h1>anulados:{infoGerais.anulados}</h1><br/>
+      <h1>anuladosSJ:{infoGerais.anuladosSJ}</h1><br/>
+      <h1>nulos:{infoGerais.nulos}</h1><br/>
+      <h1>totais:{infoGerais.totais}</h1><br/>
+      </div>
+      
       <div style={{textAlign: 'center', fontSize: '32px', fontWeight: 'bold'}}>
           {/* <p>{list.numero}</p> */}
       </div><br/>
