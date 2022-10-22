@@ -90,7 +90,7 @@ export const GeraisModal = ({infoGerais, handleCloseGerais, showGerais }) => {
           <div className='circulo-terciario-container'>
             <FaVoteYea/>
             <h3>{infoGerais.psecoes}%</h3>
-            <span>das unas apuradas</span>
+            <span>das urnas apuradas</span>
           </div>
         </M.CirculoTerciario>
       </M.ContainerSecundario>
