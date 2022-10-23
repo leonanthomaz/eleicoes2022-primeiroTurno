@@ -37,9 +37,10 @@ export const GeraisModal = ({infoGerais, handleCloseGerais, showGerais }) => {
           <M.CirculoPrincipal>
               <div className='circulo-principal-container'>
                 
-                <span>Total Comparecimento</span>
-                <h3>{Number(infoGerais.totais).toLocaleString('pt-BR')}</h3>
-                <h2>{infoGerais.pcomparecimento}%</h2>
+                <span>Seções Apuradas:</span>
+                <h3>{Number(infoGerais.tsecoes).toLocaleString('pt-BR')}</h3>
+                <h2>{infoGerais.psecoes}%</h2>
+
               </div>
           </M.CirculoPrincipal>
         </M.Left>
@@ -47,21 +48,21 @@ export const GeraisModal = ({infoGerais, handleCloseGerais, showGerais }) => {
         <M.Right>
           <M.CirculoSecundario>
               <div className='circulo-secundario-container'>
-                <span>Abstenções</span>
+                <span>Abstenções:</span>
                 <h3>{Number(infoGerais.abstencoes).toLocaleString('pt-BR')}</h3>
                 <h5>{infoGerais.pabstencoes}%</h5>
               </div>
           </M.CirculoSecundario>
           <M.CirculoSecundario>
               <div className='circulo-secundario-container'>
-                <span>Brancos</span>
+                <span>Brancos:</span>
                 <h3>{Number(infoGerais.branco).toLocaleString('pt-BR')}</h3>
                 <h5>{infoGerais.pbranco}%</h5>
               </div>
           </M.CirculoSecundario>
           <M.CirculoSecundario>
               <div className='circulo-secundario-container'>
-                <span>Nulos</span>
+                <span>Nulos:</span>
                 <h3>{Number(infoGerais.nulos).toLocaleString('pt-BR')}</h3>
                 <h5>{infoGerais.pnulo}%</h5>
               </div>
@@ -74,7 +75,7 @@ export const GeraisModal = ({infoGerais, handleCloseGerais, showGerais }) => {
           <div className='circulo-terciario-container'>
             <FaVoteYea/>
             <h3>{Number(infoGerais.secoes).toLocaleString('pt-BR')}</h3>
-            <span>seções no total</span>
+            <span>seções</span>
           </div>
         </M.CirculoTerciario>
 
@@ -82,15 +83,16 @@ export const GeraisModal = ({infoGerais, handleCloseGerais, showGerais }) => {
           <div className='circulo-terciario-container'>
             <FaVoteYea/>
             <h3>{Number(infoGerais.tsecoes).toLocaleString('pt-BR')}</h3>
-            <span>seções apuradas</span>
+            <span>apuradas</span>
           </div>
         </M.CirculoTerciario>
 
         <M.CirculoTerciario>
           <div className='circulo-terciario-container'>
             <FaVoteYea/>
-            <h3>{infoGerais.psecoes}%</h3>
-            <span>das urnas apuradas</span>
+            <h3>{Number(infoGerais.totais).toLocaleString('pt-BR')}</h3>
+            <span>comparecidos</span>
+
           </div>
         </M.CirculoTerciario>
       </M.ContainerSecundario>
