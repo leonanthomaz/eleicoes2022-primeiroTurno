@@ -75,7 +75,7 @@ export const Card = ({ data }) => {
             return(
             <Fragment key={i}>
                 <C.Titulo>
-                    <h3>Acompanhe a apuração do 1º Turno</h3>
+                    {/* <h3>Acompanhe a apuração do 1º Turno</h3> */}
                     <div className='titulo-header'>
                         <b>{st.pst}%</b> das seções apuradas
                     </div>
@@ -85,9 +85,7 @@ export const Card = ({ data }) => {
                     <div className='titulo-footer'>
                         <span>Última atualização: {st.dg} - {st.hg} (Horário local) - Fonte: TSE</span>
                     </div>
-                </C.Titulo>
-
-                <C.TopBar>
+                    <C.TopBar>
                    <span><a className='atualizar' onClick={()=>{window.location.reload()}}><C.IconAtualizar/> Atualizar</a></span>
                    <span><a className='gerais' onClick={()=>{handleInfoGerais(
                     st.vnom,
@@ -105,6 +103,9 @@ export const Card = ({ data }) => {
                     st.pvb,
                     st.tv)}}><C.IconVotos/>Informações Gerais</a></span>
                 </C.TopBar>
+                </C.Titulo>
+
+                
 
                 <GeraisModal 
                 infoGerais={infoGerais} 
