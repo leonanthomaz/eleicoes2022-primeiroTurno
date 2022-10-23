@@ -91,7 +91,7 @@ export const GeraisModal = ({infoGerais, handleCloseGerais, showGerais }) => {
           <div className='circulo-terciario-container'>
             <FaVoteYea/>
             <h3>{Number(infoGerais.totais).toLocaleString('pt-BR')}</h3>
-            <span>comparecidos</span>
+            <span>presentes</span>
 
           </div>
         </M.CirculoTerciario>

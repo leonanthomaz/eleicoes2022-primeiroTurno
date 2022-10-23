@@ -41,7 +41,7 @@ export const CandidatoModal = ({ candidato, handleCloseCandidato, showCandidato 
       <Modal.Body>
 
         <CM.Container>
-          <CM.Header>
+          <CM.Box>
             <div className='header-info'>
               <div className='header-img'>
                 <img 
@@ -73,7 +73,7 @@ export const CandidatoModal = ({ candidato, handleCloseCandidato, showCandidato 
               </div>
               <span>Situação: <span>{candidato.situacao ? candidato.situacao : 'Indefinida'}</span></span> 
             </div>
-          </CM.Header>
+          </CM.Box>
         </CM.Container>  
       </Modal.Body>
       <Modal.Footer>

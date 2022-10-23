@@ -18,6 +18,7 @@ background-size: cover;
 background-repeat: no-repeat;
 background-position: center;
 padding-top: 10px;
+padding-bottom: 10px;
 background-image: url('https://cep.unifesp.br/images/abstrato1.png');
 
 /* @media(max-height: 500px){

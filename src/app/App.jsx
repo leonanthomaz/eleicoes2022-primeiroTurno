@@ -4,6 +4,7 @@ import { GlobalStyles } from "./share/styles/GlobalStyles";
 import { Header } from "./components/Header";
 import { Card } from "./components/Card";
 import axios from "axios";
+import { Footer } from "./components/Footer";
 
 export const App = () => {
   const [ data, setData ] = useState([])
@@ -22,6 +23,7 @@ export const App = () => {
       <GlobalStyles/>
       <Header/>
       <Card data={data}/>
+      <Footer/>
     </div>
   );
 }
