@@ -45,35 +45,39 @@ export const CandidatoModal = ({ candidato, handleCloseCandidato, showCandidato 
             <div className='header-info'>
               <div className='header-img'>
                 <img 
-                  src={
-                    candidato.nome === "LULA" ? imgLula 
-                    : candidato.nome === "JAIR BOLSONARO" ? imgBolsonaro 
-                    : candidato.nome === "CIRO GOMES" ? imgCiro 
-                    : candidato.nome === "SIMONE TEBET" ? imgSimone 
-                    : candidato.nome === "SORAYA THRONICKE" ? imgSoraya 
-                    : candidato.nome === "FELIPE D&apos;AVILA" ? imgFelipe 
-                    : candidato.nome === "PADRE KELMON" ? imgPadre 
-                    : candidato.nome === "LÉO PÉRICLES" ? imgLeo 
-                    : candidato.nome === "SOFIA MANZANO" ? imgSofia 
-                    : candidato.nome === "VERA" ? imgVera 
-                    : candidato.nome === "CONSTITUINTE EYMAEL" ? imgEymael 
-                    : ''} alt={candidato.nome} width={150} 
-                  />
-                </div>
-                <h3>{candidato.numero}</h3>
+                src={
+                  candidato.nome === "LULA" ? imgLula 
+                  : candidato.nome === "JAIR BOLSONARO" ? imgBolsonaro 
+                  : candidato.nome === "CIRO GOMES" ? imgCiro 
+                  : candidato.nome === "SIMONE TEBET" ? imgSimone 
+                  : candidato.nome === "SORAYA THRONICKE" ? imgSoraya 
+                  : candidato.nome === "FELIPE D&apos;AVILA" ? imgFelipe 
+                  : candidato.nome === "PADRE KELMON" ? imgPadre 
+                  : candidato.nome === "LÉO PÉRICLES" ? imgLeo 
+                  : candidato.nome === "SOFIA MANZANO" ? imgSofia 
+                  : candidato.nome === "VERA" ? imgVera 
+                  : candidato.nome === "CONSTITUINTE EYMAEL" ? imgEymael 
+                  : ''} alt={candidato.nome} width={150} 
+                />
+              </div>
+              <h3>{candidato.numero}</h3>
             </div>
             <div className='header-info'>
-              <h4>Partido (Coligação):</h4> 
-              <h5>{candidato.partido}</h5>
-              <h4>Situação: <span>{candidato.situacao}</span></h4> 
+              <div className='header-h'>
+                  <h4>Partido (Coligação):</h4> 
+                  <h5>{candidato.partido}</h5>
+              </div>
+              <div className='header-f'>
+                <h3>{candidato.porcentagem}%</h3>
+                Qtd de votos:<span>{Number(candidato.totalvotos).toLocaleString('pt-BR')}</span>
+              </div>
+              <span>Situação: <span>{candidato.situacao ? candidato.situacao : 'Indefinida'}</span></span> 
             </div>
           </CM.Header>
         </CM.Container>  
-          
       </Modal.Body>
-
       <Modal.Footer>
-
+          Fonte: TSE
       </Modal.Footer>
     </Modal>
   )

@@ -23,7 +23,6 @@ padding-top: 20px;
 }
 `;
 
-
 export const TopBar = styled.div`
 /* border: 2px solid red; */
 display: flex;
@@ -145,12 +144,14 @@ padding: 8px;
 
         .candidato-img{
             /* background: #93f893; */
-            background: ${({eleito}) => (eleito ? '#93f893' : '#f89393')};
-
             border-radius: 50%;
             width: 150px;
             height: 150px;
             margin-right: 24px;
+
+            img{
+                background: ${({eleito}) => (eleito ? '#93f893' : '#f89393')};
+            }
 
             @media(max-width: 760px){
                 background: none;
@@ -175,7 +176,8 @@ padding: 8px;
             }
 
             @media(max-width: 450px){
-                width: 80px;
+                width: 70px;
+                height: 70px;
                 margin: auto;
 
                 img{
@@ -287,8 +289,8 @@ height: 12px;
 padding: 10px;
 border-radius: 8px;
 
-border: ${({eleito}) => (eleito ? '2px solid green' : '2px solid red')};
-background: ${({eleito}) => (eleito ? 'green' : 'red')};
+border: ${({eleito}) => (eleito === "s" ? '2px solid green' : eleito === "n" ? '2px solid red' : 'none')};
+background: ${({eleito}) => (eleito === "s" ? 'green' : eleito === "n" ? 'red' : 'none')};
 
 
 span{
