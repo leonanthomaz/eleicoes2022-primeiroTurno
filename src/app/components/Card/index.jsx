@@ -74,22 +74,22 @@ export const Card = ({ data }) => {
         {data.map((st, i)=>{
             return(
             <Fragment key={i}>
-                <C.Titulo>
-                    {/* <h3>Acompanhe a apuração do 1º Turno</h3> */}
-                    <div aria-label={`Seções apuradas até o momento: ${st.pst}%`} className='titulo-header'>
-                        <b>{st.pst}%</b> das seções apuradas
-                    </div>
-                    <C.TituloUrnasApuradasContainer>
-                        <b aria-label="Ícone representando o começo da barra de porcentagem, começando em 0%" className='bleft'>0%</b><C.TituloUrnasApuradas porcentagem={st.pst} aria-label={`Porcentagem real e atual da apuração: ${st.pst}%`}/><b aria-label="Ícone representando o final da barra de porcentagem, finalizando em 100%" className='bright'>100%</b>
-                    </C.TituloUrnasApuradasContainer>
-                    <div className='titulo-footer'>
-                        <span aria-label={`Última atualização: dia ${st.dg} às ${st.hg} horas, horário de Brasília`}>Última atualização: {st.dg} - {st.hg} (Horário local) - Fonte: TSE</span>
-                    </div>
-                    <C.TopBar>
-                   <span><a 
-                    aria-label="Botão para atualizar página" className='atualizar' onClick={()=>{window.location.reload()}}><C.IconAtualizar/> Atualizar</a></span>
-                   <span><a 
-                   aria-label="Botão mostrar estatísticas gerais da apuração." className='gerais' onClick={()=>{handleInfoGerais(
+               <C.Titulo>
+                {/* <h3>Acompanhe a apuração do 1º Turno</h3> */}
+                <div aria-label={`Seções apuradas até o momento: ${st.pst}%`} className='titulo-header'>
+                    <b>{st.pst}%</b> das seções apuradas
+                </div>
+                <C.TituloUrnasApuradasContainer>
+                    <b aria-label="Ícone representando o começo da barra de porcentagem, começando em 0%" className='bleft'>0%</b><C.TituloUrnasApuradas porcentagem={st.pst} aria-label={`Porcentagem real e atual da apuração: ${st.pst}%`}/><b aria-label="Ícone representando o final da barra de porcentagem, finalizando em 100%" className='bright'>100%</b>
+                </C.TituloUrnasApuradasContainer>
+                <div className='titulo-footer'>
+                    <span aria-label={`Última atualização: dia ${st.dg} às ${st.hg} horas, horário de Brasília`}>Última atualização: {st.dg} - {st.hg} (Horário local) - Fonte: TSE</span>
+                </div>
+                <C.TopBar>
+                    <span><a 
+                        aria-label="Botão para atualizar página" className='atualizar' onClick={()=>{window.location.reload()}}><C.IconAtualizar/> Atualizar</a></span>
+                    <span><a 
+                    aria-label="Botão mostrar estatísticas gerais da apuração." className='gerais' onClick={()=>{handleInfoGerais(
                     st.vnom,
                     st.pc,
                     st.a,
@@ -105,7 +105,7 @@ export const Card = ({ data }) => {
                     st.pvb,
                     st.tv)}}><C.IconVotos/>Informações Gerais</a></span>
                 </C.TopBar>
-                </C.Titulo>
+               </C.Titulo>
 
                 <GeraisModal 
                 infoGerais={infoGerais} 
