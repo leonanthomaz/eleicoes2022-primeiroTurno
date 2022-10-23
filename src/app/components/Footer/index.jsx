@@ -1,13 +1,8 @@
 import React from 'react';
 import {
-//   FaFacebook,
-//   FaInstagram,
-//   FaYoutube,
-  FaTwitter,
   FaLinkedin,
   FaGithub,
   FaGoogle,
-  FaMapMarkerAlt
 } from 'react-icons/fa';
 import { BsWhatsapp } from "react-icons/bs";
 
@@ -26,7 +21,6 @@ export const Footer = () => {
                         </F.SocialLogo>
 
                         <F.SocialIcons>
-
                             <F.SocialIconLink
                                 href='https://api.whatsapp.com/send?phone=5521998090928'
                                 target='_blank'

@@ -7,7 +7,7 @@ export const Header = () => {
         <H.Container>
             <H.Titulo>Eleições 2022 - 1º Turno</H.Titulo>
             <H.Brasao>
-                <img src={brasao} alt="" />
+                <img src={brasao} alt="Brasão da Presiência da República" loading="lazy" />
             </H.Brasao>
         </H.Container>
     )

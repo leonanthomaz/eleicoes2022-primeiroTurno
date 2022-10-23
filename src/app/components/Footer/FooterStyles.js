@@ -78,13 +78,6 @@ export const SocialLogo = styled.div`
     }
 `;
 
-export const Address = styled.div`
-  font-size: 12px;
-  
-  i{
-    color: white;
-  }
-`;
 
 export const Icon = styled.div`
 font-size: 32px;
@@ -98,7 +91,6 @@ export const SocialIcons = styled.div`
   width: 240px;
   padding-bottom: 10px;
 
-  
 `;
 
 export const SocialIconLink = styled.a`

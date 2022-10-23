@@ -68,7 +68,7 @@ export const CandidatoModal = ({ candidato, handleCloseCandidato, showCandidato 
                   : candidato.nome === "SOFIA MANZANO" ? imgSofia 
                   : candidato.nome === "VERA" ? imgVera 
                   : candidato.nome === "CONSTITUINTE EYMAEL" ? imgEymael 
-                  : ''} alt={candidato.nome} width={150} 
+                  : ''} alt={`Imagem do candidato ${candidato.nome}.`} loading="lazy" width={150} 
                 />
               </div>
               <h3>{candidato.numero}</h3>

@@ -2,16 +2,6 @@ import styled from "styled-components";
 import { BiRefresh } from "react-icons/bi";
 import { FaVoteYea } from "react-icons/fa";
 
-export const IconAtualizar = styled(BiRefresh)`
-    font-size: 25px;
-    margin-right: 3px;
-`;
-
-export const IconVotos = styled(FaVoteYea)`
-    font-size: 20px;
-    margin-right: 5px;
-`;
-
 export const Principal = styled.div`
 min-height: calc(100vh - 90px);
 background-size: cover;
@@ -52,6 +42,16 @@ padding-top: 10px;
         font-size: 10px;
    }
 }
+`;
+
+export const IconAtualizar = styled(BiRefresh)`
+    font-size: 25px;
+    margin-right: 3px;
+`;
+
+export const IconVotos = styled(FaVoteYea)`
+    font-size: 20px;
+    margin-right: 5px;
 `;
 
 export const TopBar = styled.div`

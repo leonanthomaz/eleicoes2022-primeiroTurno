@@ -1,5 +1,6 @@
 import React, { Fragment, useState } from 'react'
 import * as C from './CardStyles'
+
 import imgLula from '../../assets/img/lula.png'
 import imgBolsonaro from '../../assets/img/bolsonaro.png'
 import imgCiro from '../../assets/img/ciro.png'
@@ -11,7 +12,6 @@ import imgSofia from '../../assets/img/sofia.png'
 import imgVera from '../../assets/img/vera.png'
 import imgFelipe from '../../assets/img/felipe.png'
 import imgEymael from '../../assets/img/eymael.png'
-
 
 import { CandidatoModal } from '../CandidatoModal'
 import { GeraisModal } from '../GeraisModal'
@@ -76,18 +76,20 @@ export const Card = ({ data }) => {
             <Fragment key={i}>
                 <C.Titulo>
                     {/* <h3>Acompanhe a apuração do 1º Turno</h3> */}
-                    <div className='titulo-header'>
+                    <div aria-label={`Seções apuradas até o momento: ${st.pst}%`} className='titulo-header'>
                         <b>{st.pst}%</b> das seções apuradas
                     </div>
                     <C.TituloUrnasApuradasContainer>
-                        <b className='bleft'>0%</b><C.TituloUrnasApuradas porcentagem={st.pst}/><b className='bright'>100%</b>
+                        <b aria-label="Ícone representando o começo da barra de porcentagem, começando em 0%" className='bleft'>0%</b><C.TituloUrnasApuradas porcentagem={st.pst} aria-label={`Porcentagem real e atual da apuração: ${st.pst}%`}/><b aria-label="Ícone representando o final da barra de porcentagem, finalizando em 100%" className='bright'>100%</b>
                     </C.TituloUrnasApuradasContainer>
                     <div className='titulo-footer'>
-                        <span>Última atualização: {st.dg} - {st.hg} (Horário local) - Fonte: TSE</span>
+                        <span aria-label={`Última atualização: dia ${st.dg} às ${st.hg} horas, horário de Brasília`}>Última atualização: {st.dg} - {st.hg} (Horário local) - Fonte: TSE</span>
                     </div>
                     <C.TopBar>
-                   <span><a className='atualizar' onClick={()=>{window.location.reload()}}><C.IconAtualizar/> Atualizar</a></span>
-                   <span><a className='gerais' onClick={()=>{handleInfoGerais(
+                   <span><a 
+                    aria-label="Botão para atualizar página" className='atualizar' onClick={()=>{window.location.reload()}}><C.IconAtualizar/> Atualizar</a></span>
+                   <span><a 
+                   aria-label="Botão mostrar estatísticas gerais da apuração." className='gerais' onClick={()=>{handleInfoGerais(
                     st.vnom,
                     st.pc,
                     st.a,
@@ -104,8 +106,6 @@ export const Card = ({ data }) => {
                     st.tv)}}><C.IconVotos/>Informações Gerais</a></span>
                 </C.TopBar>
                 </C.Titulo>
-
-                
 
                 <GeraisModal 
                 infoGerais={infoGerais} 
@@ -141,7 +141,7 @@ export const Card = ({ data }) => {
                                             : c.nm === "SOFIA MANZANO" ? imgSofia 
                                             : c.nm === "VERA" ? imgVera 
                                             : c.nm === "CONSTITUINTE EYMAEL" ? imgEymael 
-                                            : ''} />
+                                            : ''} alt={`Imagem do candidato ${c.nm}.`} loading="lazy" />
                                     </div>
                                 </div>
             

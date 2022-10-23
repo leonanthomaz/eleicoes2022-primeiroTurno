@@ -1,9 +1,11 @@
 
 import React, { useEffect, useState } from "react";
 import { GlobalStyles } from "./share/styles/GlobalStyles";
+
+import axios from "axios";
+
 import { Header } from "./components/Header";
 import { Card } from "./components/Card";
-import axios from "axios";
 import { Footer } from "./components/Footer";
 
 export const App = () => {
