@@ -8,6 +8,7 @@ justify-content: center;
 align-items: center;
 justify-content: space-between;
 background: #eeeeee;
+padding-top: 10px;
 
 @media(max-height: 500px){
     height: 60px;

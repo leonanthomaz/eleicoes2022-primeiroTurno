@@ -1,32 +1,5 @@
 import styled from "styled-components";
 
-export const Teste = styled.div`
-
-.container{
-    display: grid;
-    grid-template-columns: auto auto;
-    border: 2px solid green;
-
-    @media(max-width: 1000px){
-        display: flex;
-        flex-direction: column;
-    }
-
-    .a{
-        background: green;
-        width: 300px;
-        height: auto;
-    }
-
-    .b{
-        background: blue;
-        width: 300px;
-        height: auto;
-    }
-
-}
-
-`;
 
 export const ContainerPrimario = styled.div`
 display: grid;
@@ -135,7 +108,8 @@ text-align: center;
 `;
 
 export const CirculoSecundario = styled.div`
-border: 5px solid #3daa27;
+
+box-shadow: rgb(255 255 255 / 10%) 0px 1px 1px 0px inset, rgb(50 50 93 / 25%) 0px 50px 100px -20px, rgb(0 0 0 / 30%) 0px 30px 60px -30px;
 border-radius: 50%;
 width: 150px;
 height: 150px;
@@ -145,12 +119,13 @@ text-align: center;
 @media(max-width: 760px){
     width: 100px;
     height: 100px;
-    border: none;
+    box-shadow: none;
 }
 
 .circulo-secundario-container{
-    margin-top: 30px;
-    margin-left: 23px;
+    margin-top: 40px;
+    margin-left: 30px;
+    width: 90px;
     position: absolute;
 
     @media(max-width: 760px){
