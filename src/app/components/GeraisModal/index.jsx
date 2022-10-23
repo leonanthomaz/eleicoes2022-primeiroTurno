@@ -1,8 +1,9 @@
 import React from 'react';
 import Modal from 'react-bootstrap/Modal';
 import * as M from './GeraisModalStyles'
-import { AiOutlineClose } from "react-icons/ai";
 import { FaVoteYea } from "react-icons/fa";
+import { MdHowToVote } from "react-icons/md";
+import { BsFillPeopleFill } from "react-icons/bs";
 
 export const GeraisModal = ({infoGerais, handleCloseGerais, showGerais }) => {
     
@@ -73,7 +74,7 @@ export const GeraisModal = ({infoGerais, handleCloseGerais, showGerais }) => {
       <M.ContainerSecundario>
         <M.CirculoTerciario>
           <div className='circulo-terciario-container'>
-            <FaVoteYea/>
+            <MdHowToVote/>
             <h3>{Number(infoGerais.secoes).toLocaleString('pt-BR')}</h3>
             <span>seções</span>
           </div>
@@ -89,7 +90,7 @@ export const GeraisModal = ({infoGerais, handleCloseGerais, showGerais }) => {
 
         <M.CirculoTerciario>
           <div className='circulo-terciario-container'>
-            <FaVoteYea/>
+            <BsFillPeopleFill/>
             <h3>{Number(infoGerais.totais).toLocaleString('pt-BR')}</h3>
             <span>presentes</span>
 
