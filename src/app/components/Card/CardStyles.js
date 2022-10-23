@@ -18,7 +18,7 @@ background-size: cover;
 background-repeat: no-repeat;
 background-position: center;
 padding-top: 10px;
-background-image: url('https://abradep.org/wp-content/uploads/2020/09/abradep-bg.jpg');
+background-image: url('https://cep.unifesp.br/images/abstrato1.png');
 
 /* @media(max-height: 500px){
     display: grid;
@@ -77,6 +77,11 @@ align-items: center;
         margin: 3px;
         padding: 2px;
     }
+
+    @media(max-width: 400px){
+        font-size: 10px;
+        padding: 4px;
+    }
 }
 
 .gerais{
@@ -96,6 +101,12 @@ align-items: center;
         margin: 3px;
         padding: 4px;
     }
+
+    @media(max-width: 400px){
+        font-size: 10px;
+        padding: 5px;
+    }
+
 }
 
 
@@ -213,7 +224,7 @@ padding: 8px;
                 border-radius: 50%;
             }
 
-            @media(max-height: 500px){
+            @media(max-height: 500px) and (min-width: 760px){
                 /* width: 130px; */
                 width: 100px;
                 height: 100px;
@@ -250,7 +261,7 @@ padding: 8px;
 
         .candidato-votos{
 
-            @media(max-height: 500px){
+            @media(max-height: 500px) and (min-width: 760px){
                 /* width: 130px; */
                 text-align: end;
                 margin-right: 25px;
