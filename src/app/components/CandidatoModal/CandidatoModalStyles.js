@@ -11,6 +11,12 @@ grid-template-columns: auto auto;
 flex: 1;
 padding: 10px;
 
+@media(max-width: 760px){
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .header-info{
     display: flex;
     flex-direction: column;
@@ -26,18 +32,27 @@ padding: 10px;
     .header-img{
         padding: 5px;
 
+        width: 200px;
+        height: 200px;
+
         img{
+            width: 100%;
             background: #838383;
             border-radius: 50%;
         }
     }
 
     .header-h{
+        text-align: end;
+
+
+        @media(max-width: 760px){
+            text-align: center;
+        }
 
         h4{
             font-size: 20px;
             font-weight: 700;
-            text-align: end;
         }
 
         span{
@@ -48,7 +63,6 @@ padding: 10px;
 
         h5{
             font-size: 14px;
-            text-align: end;
         }
     }
 

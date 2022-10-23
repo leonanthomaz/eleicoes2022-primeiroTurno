@@ -11,8 +11,7 @@ import imgSofia from '../../assets/img/sofia.png'
 import imgVera from '../../assets/img/vera.png'
 import imgFelipe from '../../assets/img/felipe.png'
 import imgEymael from '../../assets/img/eymael.png'
-import { BiRefresh } from "react-icons/bi";
-import { FaVoteYea } from "react-icons/fa";
+
 
 import { CandidatoModal } from '../CandidatoModal'
 import { GeraisModal } from '../GeraisModal'
@@ -74,7 +73,7 @@ export const Card = ({ data }) => {
 
         {data.map((st, i)=>{
             return(
-            <Fragment>
+            <Fragment key={i}>
                 <C.Titulo>
                     <h3>Acompanhe a apuração do 1º Turno</h3>
                     <div className='titulo-header'>
@@ -89,7 +88,7 @@ export const Card = ({ data }) => {
                 </C.Titulo>
 
                 <C.TopBar>
-                   <span><a className='atualizar' onClick={()=>{window.location.reload()}}><BiRefresh/> Atualizar</a></span>
+                   <span><a className='atualizar' onClick={()=>{window.location.reload()}}><C.IconAtualizar/> Atualizar</a></span>
                    <span><a className='gerais' onClick={()=>{handleInfoGerais(
                     st.vnom,
                     st.pc,
@@ -104,7 +103,7 @@ export const Card = ({ data }) => {
                     st.ptvn,
                     st.vb,
                     st.pvb,
-                    st.tv)}}><FaVoteYea/> Informações Gerais</a></span>
+                    st.tv)}}><C.IconVotos/>Informações Gerais</a></span>
                 </C.TopBar>
 
                 <GeraisModal 
