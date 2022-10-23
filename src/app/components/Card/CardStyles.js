@@ -181,11 +181,11 @@ padding: 8px;
 }
 
 @media(max-width: 450px){
-    width: 180px;
+    width: 170px;
 }
 
 @media(max-width: 375px){
-    width: 165px;
+    width: 160px;
     padding: 3px;
 }
 
@@ -193,7 +193,6 @@ padding: 8px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 250px;
     height: auto;
     padding: 10px;
     
@@ -348,10 +347,6 @@ padding: 8px;
             }
 
             @media(max-width: 500px){
-                font-size: 12px;
-            }
-
-            @media(max-width: 375px){
                 font-size: 10px;
             }
         }

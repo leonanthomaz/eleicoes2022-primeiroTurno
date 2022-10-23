@@ -73,11 +73,13 @@ text-align: center;
     /* border: 2px solid red; */
     margin-top: 60px;
     margin-left: 42px;
+    width: 150px;
     position: absolute;
 
     @media(max-width: 760px){
         margin-top: 45px;
         margin-left: 30px;
+        width: 120px;
     }
     
     h3{
