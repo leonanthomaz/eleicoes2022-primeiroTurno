@@ -35,7 +35,18 @@ export const CandidatoModal = ({ candidato, handleCloseCandidato, showCandidato 
           // borderBottom: '2px solid',
           lineHeight: '5rem',
           fontWeight: 900
-          }}>{candidato.nome}</h1>
+          }}>{candidato.nome === "LULA" ? 'LULA' 
+          : candidato.nome === "JAIR BOLSONARO" ? 'JAIR BOLSONARO'
+          : candidato.nome === "CIRO GOMES" ? 'CIRO GOMES' 
+          : candidato.nome === "SIMONE TEBET" ? 'SIMONE TEBET' 
+          : candidato.nome === "SORAYA THRONICKE" ? 'SORAYA' 
+          : candidato.nome === "FELIPE D&apos;AVILA" ? "FELIPE D'ÁVILA" 
+          : candidato.nome === "PADRE KELMON" ? 'PADRE KELMON'
+          : candidato.nome === "LÉO PÉRICLES" ? 'LÉO PÉRICLES' 
+          : candidato.nome === "SOFIA MANZANO" ? 'SOFIA MANZ' 
+          : candidato.nome === "VERA" ? 'VERA LÚCIA'
+          : candidato.nome === "CONSTITUINTE EYMAEL" ? 'EYMAEL' 
+          : ''}</h1>
           </Modal.Title>
       </Modal.Header>
       <Modal.Body>
