@@ -16,6 +16,8 @@ import imgEymael from '../../assets/img/eymael.png'
 import { CandidatoModal } from '../CandidatoModal'
 import { GeraisModal } from '../GeraisModal'
 
+import Progressbar from '../../share/utils/progressbar_skills'
+
 export const Card = ({ data }) => {
 
     const [ candidato, setCandidato ] = useState([]);
@@ -80,7 +82,8 @@ export const Card = ({ data }) => {
                     <b>{st.pst}%</b> das seções apuradas
                 </div>
                 <C.TituloUrnasApuradasContainer>
-                    <b aria-label="Ícone representando o começo da barra de porcentagem, começando em 0%" className='bleft'>0%</b><C.TituloUrnasApuradas porcentagem={st.pst} aria-label={`Porcentagem real e atual da apuração: ${st.pst}%`}/><b aria-label="Ícone representando o final da barra de porcentagem, finalizando em 100%" className='bright'>100%</b>
+                    <C.TituloUrnasApuradas aria-label="Barra de progresso das urnas apuradas, iniciando em 0% e finalizando em 100%"><Progressbar bgcolor={'linear-gradient(to right,#3737c2, #ff0000)'} progress={parseInt(st.pst)} height={20} /></C.TituloUrnasApuradas>
+                    {/* <b aria-label="Ícone representando o começo da barra de porcentagem, começando em 0%" className='bleft'>0%</b><C.TituloUrnasApuradas porcentagem={st.pst} aria-label={`Porcentagem real e atual da apuração: ${st.pst}%`}/><b aria-label="Ícone representando o final da barra de porcentagem, finalizando em 100%" className='bright'>100%</b> */}
                 </C.TituloUrnasApuradasContainer>
                 <div className='titulo-footer'>
                     <span aria-label={`Última atualização: dia ${st.dg} às ${st.hg} horas, horário de Brasília`}>Última atualização: {st.dg} - {st.hg} (Horário local) - Fonte: TSE</span>

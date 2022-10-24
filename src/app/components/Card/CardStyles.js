@@ -132,12 +132,13 @@ font-size: 12px;
 }
 `;
 
+
 export const TituloUrnasApuradas = styled.div`
-background-image: linear-gradient(to right, blue, rgba(255,0,0,1));
-height: 10px;
-width: ${({ porcentagem }) => (porcentagem  ? `${parseFloat(porcentagem)}%` : '0%')};
-border-radius: 20px;
+margin: auto;
+width: 300px;
 margin: 2px;
+border: 1px solid whitesmoke;
+border-radius: 20px;
 transition: all ease-in-out 0.5s;
 `;
 
