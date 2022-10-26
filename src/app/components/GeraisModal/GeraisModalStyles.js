@@ -1,23 +1,20 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-/* border: 2px solid red; */
 background: #ecececce;
 border-radius: 20px;
+padding: 30px;
 
 @media(max-width: 760px){
     padding: 10px;
 }
-
 `;
 
 export const Wrapper = styled.div`
-border: 2px solid red;
-padding-top: 40px;
+padding-top: 20px;
 `;
 
 export const Header = styled.div`
-/* border: 2px solid red; */
 display: block;
 
 `;
@@ -28,7 +25,6 @@ text-align: center;
 margin-top: 20px;
 border-bottom: 3px solid #14141498;
 line-height: 5rem;
-/* font-family: 'Roboto', sans-serif; */
 font-weight: 900;
 font-size: 35px;
 
@@ -42,6 +38,7 @@ font-size: 35px;
 export const ContainerPrimario = styled.div`
 display: grid;
 grid-template-columns: auto auto;
+padding: 10px;
 
 @media(max-width: 1000px){
     display: flex;

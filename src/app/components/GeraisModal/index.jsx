@@ -21,7 +21,7 @@ export const GeraisModal = ({infoGerais, handleCloseGerais, showGerais }) => {
     <M.Container>
 
       <M.Header>
-          <GrClose 
+      <GrClose 
           style={{color: '#14141498', 
           float: 'right', 
           fontSize: '20px',

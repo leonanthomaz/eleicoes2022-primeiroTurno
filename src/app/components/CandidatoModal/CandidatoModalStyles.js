@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const Container = styled.div`
 /* border: 2px solid red; */
-padding: 20px;
 background: #ecececce;
 border-radius: 20px;
 padding: 30px;
