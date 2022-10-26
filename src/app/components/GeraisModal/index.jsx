@@ -1,6 +1,7 @@
 import React from 'react';
 import Modal from 'react-bootstrap/Modal';
 import * as M from './GeraisModalStyles';
+import { GrClose } from "react-icons/gr";
 
 import { FaVoteYea } from "react-icons/fa";
 import { MdHowToVote } from "react-icons/md";
@@ -17,22 +18,21 @@ export const GeraisModal = ({infoGerais, handleCloseGerais, showGerais }) => {
       onHide={handleCloseGerais}
       style={{background: '#14141498'}}
      >
-      <Modal.Header closeButton>
-          <Modal.Title>
-          <h2 style={{
-          color: '#14141498', 
-          textAlign: 'center', 
-          marginTop: '20px',
-          // borderBottom: '2px solid',
-          lineHeight: '5rem',
-          fontWeight: 900
-          }}>Estatísticas Gerais</h2>
-          </Modal.Title>
-      </Modal.Header>
+    <M.Container>
 
-      <Modal.Body style={{background: '#ecececce', padding: '20px'}}>
-        
-        <M.ContainerPrimario>
+      <M.Header>
+          <GrClose 
+          style={{color: '#14141498', 
+          float: 'right', 
+          fontSize: '20px',
+          cursor: 'pointer'
+          }} onClick={handleCloseGerais}
+          />
+        <M.Title>Estatísticas Gerais</M.Title>
+      </M.Header>
+
+      <M.Wrapper>
+      <M.ContainerPrimario>
           <M.Left>
             <M.CirculoPrincipal>
                 <div className='circulo-principal-container'>
@@ -94,8 +94,9 @@ export const GeraisModal = ({infoGerais, handleCloseGerais, showGerais }) => {
             </div>
           </M.CirculoTerciario>
         </M.ContainerSecundario>
-        <br/>
-      </Modal.Body>
+      </M.Wrapper>
+      </M.Container>
+      
 
       <Modal.Footer>
           Fonte: TSE

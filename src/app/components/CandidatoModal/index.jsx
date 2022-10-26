@@ -27,7 +27,7 @@ export const CandidatoModal = ({ candidato, handleCloseCandidato, showCandidato 
       onHide={handleCloseCandidato}
       style={{background: '#14141498'}}
      >
-    <CM.Container>
+      <CM.Container>
       <CM.Header>
           <GrClose 
           style={{color: '#14141498', 
