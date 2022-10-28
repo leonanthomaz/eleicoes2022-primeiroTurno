@@ -5,33 +5,33 @@ Apuração da eleição presidencial do primeiro turno, consumindo API diretamen
 https://resultados.tse.jus.br/oficial/ele2022/544/dados-simplificados/br/br-c0001-e000544-r.json
 
 ## Dicionário da API
-Datas e Hora:
-- Hora local: hg  
-- Horário local: dg 
+<b>Datas e Hora</b>
+- <b>Hora local</b>: hg  
+- <b>Horário local</b>: dg 
 
-Votos:
-- Validos: vnom
-- Anulados: van
-- Anulados sob judice: vansj
-- Nulos (totais): tvn
-- Nulos (porcentagem): ptvn
-- Brancos: vb
-- Brancos (porcentagem): pvb
-- Votos Totais: tv
+<b>Votos:
+- <b>Validos</b>: vnom
+- <b>Anulados</b>: van
+- <b>Anulados sob judice</b>: vansj
+- <b>Nulos (totais)</b>: tvn
+- <b>Nulos (porcentagem)</b>: ptvn
+- <b>Brancos</b>: vb
+- <b>Brancos (porcentagem)</b>: pvb
+- <b>Votos Totais</b>: tv
 
-Candidato:
+<b>Candidato</b>:
 - <b>Nome do candidato</b>: vnom
-- Partido: van
-- Numero: tvn
-- Eleito: vnom
-- Porcentagem obtida: van
-- Total de Votos: vap
+- <b>Partido</b>: van
+- <b>Numero</b>: tvn
+- <b>Porcentagem obtida</b>: van
+- <b>Eleito</b>: vnom
+- <b>Total de Votos</b>: vap
 
-Estatisticas gerais:
-- Comparecimento: pc
-- Abstenções: a
-- Porcentagem de abstenções: pa
-- Seções (contabilizadas): s
-- Seções (totais apuradas): st
-- Seções (porcentagem apuradas): pst
+<b>Estatisticas gerais</b>:
+- <b>Comparecimento</b>: pc
+- <b>Porcentagem de abstenções</b>: pa
+- <b>Abstenções</b>: a
+- <b>Seções (contabilizadas)</b>: s
+- <b>Seções (totais apuradas)</b>: st
+- <b>Seções (porcentagem apuradas)</b>: pst
 
