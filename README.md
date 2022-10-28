@@ -5,10 +5,11 @@ Apuração da eleição presidencial do primeiro turno, consumindo API diretamen
 https://resultados.tse.jus.br/oficial/ele2022/544/dados-simplificados/br/br-c0001-e000544-r.json
 
 ## Dicionário da API
+
 <b>Datas e Hora</b>
 - <b>Hora local</b>: hg  
 - <b>Horário local</b>: dg 
-
+<hr/>
 <b>Votos</b>:
 - <b>Validos</b>: vnom
 - <b>Anulados</b>: van
@@ -18,7 +19,7 @@ https://resultados.tse.jus.br/oficial/ele2022/544/dados-simplificados/br/br-c000
 - <b>Brancos</b>: vb
 - <b>Brancos (porcentagem)</b>: pvb
 - <b>Votos Totais</b>: tv
-
+<hr/>
 <b>Candidato</b>:
 - <b>Nome do candidato</b>: vnom
 - <b>Partido</b>: van
@@ -26,7 +27,7 @@ https://resultados.tse.jus.br/oficial/ele2022/544/dados-simplificados/br/br-c000
 - <b>Porcentagem obtida</b>: van
 - <b>Eleito</b>: vnom
 - <b>Total de Votos</b>: vap
-
+<hr/>
 <b>Estatisticas gerais</b>:
 - <b>Comparecimento</b>: pc
 - <b>Porcentagem de abstenções</b>: pa
