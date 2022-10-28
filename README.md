@@ -19,8 +19,8 @@ Votos:
 - Brancos (porcentagem): pvb
 - Votos Totais: tv
 
-Votos:
-- Nome do candidato: vnom
+Candidato:
+- <b>Nome do candidato</b>: vnom
 - Partido: van
 - Numero: tvn
 - Eleito: vnom
@@ -30,7 +30,7 @@ Votos:
 Estatisticas gerais:
 - Comparecimento: pc
 - Abstenções: a
-- porcentagem de abstencoes: pa
+- Porcentagem de abstenções: pa
 - Seções (contabilizadas): s
 - Seções (totais apuradas): st
 - Seções (porcentagem apuradas): pst
