@@ -7,8 +7,6 @@ https://resultados.tse.jus.br/oficial/ele2022/544/dados-simplificados/br/br-c000
 ## Dicionário da API
 
 ### Data e Hora
-
-<b>Datas e Hora</b>
 - <b>Hora local</b>: hg  
 - <b>Horário local</b>: dg 
 
