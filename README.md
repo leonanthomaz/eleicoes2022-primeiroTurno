@@ -9,7 +9,7 @@ https://resultados.tse.jus.br/oficial/ele2022/544/dados-simplificados/br/br-c000
 - <b>Hora local</b>: hg  
 - <b>Horário local</b>: dg 
 
-<b>Votos:
+<b>Votos</b>:
 - <b>Validos</b>: vnom
 - <b>Anulados</b>: van
 - <b>Anulados sob judice</b>: vansj
