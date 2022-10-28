@@ -6,11 +6,13 @@ https://resultados.tse.jus.br/oficial/ele2022/544/dados-simplificados/br/br-c000
 
 ## Dicionário da API
 
+## Data e Hora
+
 <b>Datas e Hora</b>
 - <b>Hora local</b>: hg  
 - <b>Horário local</b>: dg 
-<hr/>
-<b>Votos</b>:
+
+## Votos
 - <b>Validos</b>: vnom
 - <b>Anulados</b>: van
 - <b>Anulados sob judice</b>: vansj
@@ -19,16 +21,16 @@ https://resultados.tse.jus.br/oficial/ele2022/544/dados-simplificados/br/br-c000
 - <b>Brancos</b>: vb
 - <b>Brancos (porcentagem)</b>: pvb
 - <b>Votos Totais</b>: tv
-<hr/>
-<b>Candidato</b>:
+
+## Candidato
 - <b>Nome do candidato</b>: vnom
 - <b>Partido</b>: van
 - <b>Numero</b>: tvn
 - <b>Porcentagem obtida</b>: van
 - <b>Eleito</b>: vnom
 - <b>Total de Votos</b>: vap
-<hr/>
-<b>Estatisticas gerais</b>:
+
+## Estatisticas gerais
 - <b>Comparecimento</b>: pc
 - <b>Porcentagem de abstenções</b>: pa
 - <b>Abstenções</b>: a
