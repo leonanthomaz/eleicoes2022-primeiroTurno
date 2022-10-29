@@ -381,7 +381,6 @@ border-radius: 8px;
 border: ${({eleito}) => (eleito === "s" ? '2px solid green' : eleito === "n" ? '2px solid red' : 'none')};
 background: ${({eleito}) => (eleito === "s" ? 'green' : eleito === "n" ? 'red' : 'none')};
 
-
 span{
     color: white;
     text-align: center;
