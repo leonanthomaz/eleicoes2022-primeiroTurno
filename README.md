@@ -25,7 +25,7 @@ https://resultados.tse.jus.br/oficial/ele2022/544/dados-simplificados/br/br-c000
 - <b>Partido</b>: van
 - <b>Numero</b>: tvn
 - <b>Porcentagem obtida</b>: van
-- <b>Eleito</b>: vnom
+- <b>Eleito</b>: e
 - <b>Total de Votos</b>: vap
 
 ### Estatisticas gerais
