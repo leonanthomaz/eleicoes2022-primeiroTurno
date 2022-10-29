@@ -127,7 +127,7 @@ export const Card = ({ data }) => {
                 <C.Container>
                     {st.cand.map((c, i)=>{
                         return(
-                        <C.Candidato key={i} eleito={c.e === 's'} onClick={()=>handleInfoCandidato(
+                        <C.Candidato key={i} eleito={c.st === 's'} onClick={()=>handleInfoCandidato(
                             c.seq, c.nm, c.cc, c.n, c.st, c.pvap, c.vap)}>
                             <div className='candidato-header'>
                                 <div className='candidato-left'>
