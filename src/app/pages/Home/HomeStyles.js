@@ -11,14 +11,19 @@ padding-top: 10px;
 padding-bottom: 10px;
 background-image: url('https://cep.unifesp.br/images/abstrato1.png');
 
-/* @media(max-height: 500px){
-    display: grid;
-    grid-template-columns: auto auto;
-} */
+
+h2{
+    text-align: center;
+    padding: 10px;
+    font-weight: 700;
+    background: whitesmoke;
+    margin: 10px;
+    color: green;
+    text-transform: uppercase;
+}
 `;
 
 export const Titulo = styled.div`
-/* border: 2px solid red; */
 padding: 10px;
 text-align: center;
 line-height: 20px;
@@ -55,13 +60,11 @@ export const IconVotos = styled(FaVoteYea)`
 `;
 
 export const TopBar = styled.div`
-/* border: 2px solid red; */
 display: flex;
 justify-content: center;
 align-items: center;
 
-
-.atualizar{
+.atualizar, .gerais, .estados{
     background: #434392ee;
     display: flex;
     align-items: center;
@@ -85,32 +88,9 @@ align-items: center;
     }
 }
 
-.gerais{
-    background: #434392ee;
-    display: flex;
-    align-items: center;
-    margin: 10px;
-    padding: 7px;
-    color: white;
-    border-radius: 10px;  
-    text-decoration: none;
-    cursor: pointer;
-    font-size: 16px;
-
-    @media(max-height: 500px){
-        font-size: 12px;
-        margin: 3px;
-        padding: 4px;
-    }
-
-    @media(max-width: 400px){
-        font-size: 10px;
-        padding: 5px;
-    }
-
+.estados{
+    padding: 10x;
 }
-
-
 
 `;
 
@@ -131,7 +111,6 @@ font-size: 12px;
     margin-left: 5px;
 }
 `;
-
 
 export const TituloUrnasApuradas = styled.div`
 margin: auto;
