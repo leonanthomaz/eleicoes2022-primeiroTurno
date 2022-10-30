@@ -66,7 +66,10 @@ align-items: center;
 
 .atualizar, .gerais, .estados{
     background: #434392ee;
+    min-width: 100px;
+    height: 40px;
     display: flex;
+    justify-content: center;
     align-items: center;
     margin: 10px;
     padding: 7px;
@@ -75,6 +78,7 @@ align-items: center;
     text-decoration: none;
     cursor: pointer;
     font-size: 16px;
+    flex-wrap: wrap;
 
     @media(max-height: 500px){
         font-size: 12px;
@@ -84,7 +88,8 @@ align-items: center;
 
     @media(max-width: 400px){
         font-size: 10px;
-        padding: 4px;
+        padding: 5px;
+        min-width: 90px;
     }
 }
 

@@ -114,7 +114,7 @@ export const Home = () => {
                         <span aria-label={`Última atualização: dia ${st.dg} às ${st.hg} horas, horário de Brasília`}>Última atualização: {st.dg} - {st.hg} (Horário local) - Fonte: TSE</span>
                     </div>
                     <H.TopBar>
-                        <span className='estados' onClick={handleClick}><H.IconVotos/> Por estado</span>
+                        <span className='estados' onClick={handleClick}><H.IconVotos/> Estados</span>
                         <span><a 
                             aria-label="Botão para atualizar página" className='atualizar' onClick={()=>{window.location.reload()}}><H.IconAtualizar/> Atualizar</a></span>
                         <span><a 
@@ -132,7 +132,7 @@ export const Home = () => {
                         st.ptvn,
                         st.vb,
                         st.pvb,
-                        st.tv)}}><H.IconVotos/>Informações Gerais</a></span>
+                        st.tv)}}><H.IconVotos/> Gerais</a></span>
                     </H.TopBar>
                 </H.Titulo>
             
