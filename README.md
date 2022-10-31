@@ -26,6 +26,7 @@ https://resultados.tse.jus.br/oficial/ele2022/544/dados-simplificados/br/br-c000
 - <b>Partido</b>: cc
 - <b>Numero</b>: n
 - <b>Situação</b>: st
+- <b>Eleito</b>: e
 - <b>Porcentagem obtida</b>: pvap
 - <b>Total de Votos</b>: vap
 

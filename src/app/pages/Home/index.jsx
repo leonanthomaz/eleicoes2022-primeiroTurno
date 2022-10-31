@@ -51,7 +51,8 @@ export const Home = () => {
 
     useEffect(()=>{
         const loadData = async () => {
-        await axios.get(`https://resultados.tse.jus.br/oficial/ele2022/544/dados-simplificados/${estado}-c0001-e000544-r.json`).then((response)=>{
+        await axios.get(`https://resultados.tse.jus.br/oficial/ele2022/544/dados-simplificados/${estado}-c0001-e000544-r.json`
+        ,{mode:'cors'}).then((response)=>{
             setData([response.data])
         })
         }
@@ -178,7 +179,7 @@ export const Home = () => {
                 <H.Container>
                     {st.cand.map((c, i)=>{
                         return(
-                        <H.Candidato key={i} eleito={c.st === 's'} onClick={()=>handleInfoCandidato(
+                        <H.Candidato key={i} eleito={c.e === 's'} onClick={()=>handleInfoCandidato(
                             c.seq, c.nm, c.cc, c.n, c.st, c.pvap, c.vap)}>
                             <div className='candidato-header'>
                                 <div className='candidato-left'>
@@ -230,13 +231,13 @@ export const Home = () => {
                                         }
                                     </h2>
                                     <h5>Vice: {c.nv}</h5>
-                                    {c.st === "s" ? 
-                                        <H.EleitoInfo eleito={c.st}>
+                                    {c.e === "s" ? 
+                                        <H.EleitoInfo eleito={c.e}>
                                             <span>Eleito</span>
                                         </H.EleitoInfo>
                                     : 
-                                    c.st === "n" ?
-                                        <H.EleitoInfo eleito={c.st}>
+                                    c.e === "n" ?
+                                        <H.EleitoInfo eleito={c.e}>
                                             <span>Não eleito</span>
                                         </H.EleitoInfo> 
                                     : ""
